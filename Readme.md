@@ -6,4 +6,6 @@
 2021_10_31 실버4 달성  
 ![silver4](https://github.com/hegunhee/Baekjoon/blob/master/img/silver4.PNG)  
 2021_11_03 실버3 달성  
-![silver4](https://github.com/hegunhee/Baekjoon/blob/master/img/silver3.PNG)  
+![silver3](https://github.com/hegunhee/Baekjoon/blob/master/img/silver3.PNG)  
+2021_11_10 실버2 달성  
+![silver2](https://github.com/hegunhee/Baekjoon/blob/master/img/silver2.PNG)
