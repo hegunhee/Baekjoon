@@ -12,4 +12,6 @@
 2021_12_05 실버1 달성  
 ![silver1](https://github.com/hegunhee/Baekjoon/blob/master/img/silver1.PNG)  
 2021_12_20 골드5 달성  
-![gold5](https://github.com/hegunhee/Baekjoon/blob/master/img/gold5.PNG)
+![gold5](https://github.com/hegunhee/Baekjoon/blob/master/img/gold5.PNG)  
+2022_01_27 골드4 달성  
+![gold4](https://github.com/hegunhee/Baekjoon/blob/master/img/gold4.PNG)  
