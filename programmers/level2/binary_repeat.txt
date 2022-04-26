@@ -1,0 +1,19 @@
+import java.util.*
+class Solution {
+    fun solution(s: String): IntArray {
+        var x = s
+        var zeroCount = 0
+        var count = 0
+        val answer = intArrayOf(0,0)
+        while(x != "1"){
+            var current = x
+            current = current.replace("0","")
+            zeroCount += x.length - current.length
+            x = current.length.toString(2)
+            count++
+        }
+        answer[0] = count
+        answer[1] = zeroCount
+        return answer
+    }
+}
