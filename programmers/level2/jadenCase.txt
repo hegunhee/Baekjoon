@@ -1,0 +1,25 @@
+class Solution {
+    fun solution(s: String): String {
+        var answer = ""
+        if(s[0].isDigit()){
+            answer += s[0].toString()
+        }else if(s[0].isWhitespace()){
+            answer += s[0].toString()
+        }else{
+            answer += s[0].uppercase()
+        }
+        for(i in 1 until s.length){
+            if(s[i].isDigit()){
+                answer += s[i].toString()
+            }else if(s[i].isWhitespace()){
+                answer += s[i].toString()
+            }else if(s[i-1].isWhitespace()){
+                answer += s[i].uppercase()
+            }else{
+                answer += s[i].lowercase()
+            }
+            
+        }
+    return answer
+    }
+}
