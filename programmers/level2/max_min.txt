@@ -1,0 +1,10 @@
+class Solution {
+    fun solution(s: String): String {
+        var answer = ""
+        val arr = s.split(" ").map{it.toInt()}.toIntArray()
+        val max = arr.maxOrNull()
+        val min = arr.minOrNull()
+        answer = "$min $max"
+        return answer
+    }
+}
