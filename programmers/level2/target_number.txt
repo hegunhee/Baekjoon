@@ -1,0 +1,43 @@
+import java.util.*
+
+var real_target : Int = 0
+var numberList = intArrayOf()
+var count = 0
+
+class Solution {
+    fun solution(numbers: IntArray, target: Int): Int {
+        var answer = 0
+        numberList = numbers
+        real_target = target
+        
+        dfs()
+        return count
+    }
+    
+    fun dfs(list : LinkedList<Char> = LinkedList<Char>()){
+    if(list.size == numberList.size){
+        isCorrect(list)
+        return
+    }
+    list.add('+')
+    dfs(list)
+    list.pollLast()
+
+    list.add('-')
+    dfs(list)
+    list.pollLast()
+}
+    fun isCorrect(list : LinkedList<Char>){
+    var num = 0
+    for(i in 0 until list.size) {
+        if(list[i] == '+'){
+            num += numberList[i]
+        }else{
+            num -= numberList[i]
+        }
+    }
+    if(num == real_target){
+        count++
+    }
+}
+}
