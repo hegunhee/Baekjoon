@@ -1,0 +1,53 @@
+import java.util.*
+val prime = IntArray(10000001){1}
+var primeList = mutableSetOf<Int>()
+var numberList = intArrayOf()
+class Solution {
+    fun solution(numbers: String): Int {
+        prime[0] = 0
+        prime[1] = 0
+        for(i in 2 until 10000){
+            if(prime[i] == 1){
+                var p = i + i
+                while(p <= 10000000){
+                    prime[p] = 0
+                    p += i
+                }
+            }
+        }
+        for(i in 0 until numbers.length){
+            numberList += numbers[i].toString().toInt()
+        }
+        for (i in 1..numbers.length) {
+            search(LinkedList(), i)
+        }
+        return primeList.size
+    }
+    fun search(list: LinkedList<Int>, n: Int) {
+    if (list.size == n) {
+        var str = ""
+        list.forEach {
+            str += it.toString()
+        }
+        if (prime[str.toInt()] == 1) {
+            primeList.add(str.toInt())
+        }
+        return
+        }
+    for (i in 0 until numberList.size) {
+        if(list.contains(numberList[i])){
+            if(list.count { it == numberList[i] } < numberList.count{it == numberList[i]}){
+                list.add(numberList[i])
+                search(list,n)
+                list.pollLast()
+            }
+        }else{
+            list.add(numberList[i])
+            search(list,n)
+            list.pollLast()
+            }
+        }
+    }
+
+
+}
